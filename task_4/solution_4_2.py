@@ -20,9 +20,12 @@ for k in range (10):
 		for i in range (t2+1, t3):
 			lemma = lemma + user_input[i]
 		if form != lemma:
-			condition = True
-		if lemma in str(form) and form[0] == lemma[0]:
-			condition = False
-		else: condition = False
-		if condition == True:
+			condition1 = True
+		else: condition1 = False
+		L = int(len(lemma))
+		for i in range (L):
+			if lemma[i] == form[i]:
+				condition2 = False
+			else: condition2 = True
+		if condition1 == True and condition2 == True:
 			print (form, lemma)
